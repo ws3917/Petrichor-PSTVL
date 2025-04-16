@@ -1,0 +1,51 @@
+{ "frames": [
+   {
+    "filename": "0",
+    "frame": { "x": 0, "y": 32, "w": 17, "h": 28 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 2, "w": 17, "h": 28 },
+    "sourceSize": { "w": 17, "h": 30 },
+    "duration": 200
+   },
+   {
+    "filename": "1",
+    "frame": { "x": 0, "y": 0, "w": 17, "h": 30 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 17, "h": 30 },
+    "sourceSize": { "w": 17, "h": 30 },
+    "duration": 200
+   },
+   {
+    "filename": "2",
+    "frame": { "x": 0, "y": 32, "w": 17, "h": 28 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 2, "w": 17, "h": 28 },
+    "sourceSize": { "w": 17, "h": 30 },
+    "duration": 200
+   },
+   {
+    "filename": "3",
+    "frame": { "x": 19, "y": 0, "w": 17, "h": 30 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 17, "h": 30 },
+    "sourceSize": { "w": 17, "h": 30 },
+    "duration": 200
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.3.11-dev",
+  "image": "right_tired.png",
+  "format": "RGBA8888",
+  "size": { "w": 36, "h": 60 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "slices": [
+  ]
+ }
+}

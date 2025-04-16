@@ -1,0 +1,49 @@
+{ "frames": [
+   {
+    "filename": "0",
+    "frame": { "x": 0, "y": 0, "w": 240, "h": 180 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 180 },
+    "sourceSize": { "w": 240, "h": 180 },
+    "duration": 466
+   },
+   {
+    "filename": "1",
+    "frame": { "x": 242, "y": 0, "w": 240, "h": 180 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 180 },
+    "sourceSize": { "w": 240, "h": 180 },
+    "duration": 466
+   },
+   {
+    "filename": "2",
+    "frame": { "x": 0, "y": 182, "w": 240, "h": 180 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 180 },
+    "sourceSize": { "w": 240, "h": 180 },
+    "duration": 466
+   },
+   {
+    "filename": "3",
+    "frame": { "x": 242, "y": 182, "w": 240, "h": 180 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 180 },
+    "sourceSize": { "w": 240, "h": 180 },
+    "duration": 466
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.3-rc4-dev",
+  "image": "ry_emotion_depression.png",
+  "format": "RGBA8888",
+  "size": { "w": 482, "h": 362 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}

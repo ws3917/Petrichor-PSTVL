@@ -1,0 +1,23 @@
+{
+    "0-single": "Enable Debug Console?\\n{color=0x7f7f7f}For if you do, in fact, know\\nexactly what you're doing.",
+    "1-single": "Stop And Think?\\n{color=0x7f7f7f}If you're stuck, doing this\\nmay help you make progress.",
+    "2-single": "Disabled",
+    "3-single": "Enabled",
+    "4-single": "No",
+    "5-single": "Yes",
+    "6-single": "ITEM",
+    "7-single": "PONDER",
+    "8-single": "OPTIONS",
+    "9-single": "SAVE",
+    "10-single": "Save The World?",
+    "11-single": "The world has\\nbeen saved.",
+    "12-single": "Back",
+    "13-single": "Music",
+    "14-single": "Sound",
+    "15-single": "Keybinds",
+    "16-single": "Shader Mode",
+    "17-single": "Debug Console",
+    "18-single": "Off",
+    "19-single": "Basic",
+    "20-single": "Advanced"
+}

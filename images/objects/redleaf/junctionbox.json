@@ -1,0 +1,112 @@
+{ "frames": [
+   {
+    "filename": "0",
+    "frame": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "sourceSize": { "w": 40, "h": 85 },
+    "duration": 1000
+   },
+   {
+    "filename": "1",
+    "frame": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "sourceSize": { "w": 40, "h": 85 },
+    "duration": 100
+   },
+   {
+    "filename": "2",
+    "frame": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "sourceSize": { "w": 40, "h": 85 },
+    "duration": 66
+   },
+   {
+    "filename": "3",
+    "frame": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "sourceSize": { "w": 40, "h": 85 },
+    "duration": 33
+   },
+   {
+    "filename": "4",
+    "frame": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "sourceSize": { "w": 40, "h": 85 },
+    "duration": 33
+   },
+   {
+    "filename": "5",
+    "frame": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "sourceSize": { "w": 40, "h": 85 },
+    "duration": 33
+   },
+   {
+    "filename": "6",
+    "frame": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "sourceSize": { "w": 40, "h": 85 },
+    "duration": 33
+   },
+   {
+    "filename": "7",
+    "frame": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "sourceSize": { "w": 40, "h": 85 },
+    "duration": 33
+   },
+   {
+    "filename": "8",
+    "frame": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "sourceSize": { "w": 40, "h": 85 },
+    "duration": 66
+   },
+   {
+    "filename": "9",
+    "frame": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "sourceSize": { "w": 40, "h": 85 },
+    "duration": 100
+   },
+   {
+    "filename": "10",
+    "frame": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 85 },
+    "sourceSize": { "w": 40, "h": 85 },
+    "duration": 1000
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.3.11-dev",
+  "image": "junctionbox.png",
+  "format": "RGBA8888",
+  "size": { "w": 40, "h": 85 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}

@@ -1,0 +1,85 @@
+{ "frames": [
+   {
+    "filename": "0",
+    "frame": { "x": 54, "y": 41, "w": 49, "h": 39 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 3, "y": 3, "w": 49, "h": 39 },
+    "sourceSize": { "w": 55, "h": 42 },
+    "duration": 100
+   },
+   {
+    "filename": "1",
+    "frame": { "x": 105, "y": 41, "w": 49, "h": 39 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 3, "y": 0, "w": 49, "h": 39 },
+    "sourceSize": { "w": 55, "h": 42 },
+    "duration": 100
+   },
+   {
+    "filename": "2",
+    "frame": { "x": 156, "y": 41, "w": 52, "h": 36 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 3, "w": 52, "h": 36 },
+    "sourceSize": { "w": 55, "h": 42 },
+    "duration": 100
+   },
+   {
+    "filename": "3",
+    "frame": { "x": 156, "y": 79, "w": 52, "h": 36 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 3, "y": 3, "w": 52, "h": 36 },
+    "sourceSize": { "w": 55, "h": 42 },
+    "duration": 100
+   },
+   {
+    "filename": "4",
+    "frame": { "x": 0, "y": 0, "w": 52, "h": 39 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 3, "w": 52, "h": 39 },
+    "sourceSize": { "w": 55, "h": 42 },
+    "duration": 100
+   },
+   {
+    "filename": "5",
+    "frame": { "x": 54, "y": 0, "w": 52, "h": 39 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 3, "y": 0, "w": 52, "h": 39 },
+    "sourceSize": { "w": 55, "h": 42 },
+    "duration": 100
+   },
+   {
+    "filename": "6",
+    "frame": { "x": 108, "y": 0, "w": 52, "h": 39 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 52, "h": 39 },
+    "sourceSize": { "w": 55, "h": 42 },
+    "duration": 100
+   },
+   {
+    "filename": "7",
+    "frame": { "x": 0, "y": 41, "w": 52, "h": 39 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 3, "y": 3, "w": 52, "h": 39 },
+    "sourceSize": { "w": 55, "h": 42 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.3.11-dev",
+  "image": "ov_bubble.png",
+  "format": "RGBA8888",
+  "size": { "w": 208, "h": 115 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}

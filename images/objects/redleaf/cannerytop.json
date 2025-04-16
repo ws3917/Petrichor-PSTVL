@@ -1,0 +1,58 @@
+{ "frames": [
+   {
+    "filename": "0",
+    "frame": { "x": 0, "y": 0, "w": 157, "h": 52 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 3, "y": 0, "w": 157, "h": 52 },
+    "sourceSize": { "w": 160, "h": 57 },
+    "duration": 133
+   },
+   {
+    "filename": "1",
+    "frame": { "x": 0, "y": 0, "w": 157, "h": 52 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 3, "y": 0, "w": 157, "h": 52 },
+    "sourceSize": { "w": 160, "h": 57 },
+    "duration": 133
+   },
+   {
+    "filename": "2",
+    "frame": { "x": 0, "y": 0, "w": 157, "h": 52 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 3, "y": 0, "w": 157, "h": 52 },
+    "sourceSize": { "w": 160, "h": 57 },
+    "duration": 133
+   },
+   {
+    "filename": "3",
+    "frame": { "x": 0, "y": 0, "w": 157, "h": 52 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 3, "y": 0, "w": 157, "h": 52 },
+    "sourceSize": { "w": 160, "h": 57 },
+    "duration": 133
+   },
+   {
+    "filename": "4",
+    "frame": { "x": 0, "y": 0, "w": 157, "h": 52 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 3, "y": 0, "w": 157, "h": 52 },
+    "sourceSize": { "w": 160, "h": 57 },
+    "duration": 133
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.3.11-dev",
+  "image": "cannerytop.png",
+  "format": "RGBA8888",
+  "size": { "w": 157, "h": 52 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}

@@ -1,0 +1,22 @@
+{ "frames": [
+   {
+    "filename": "0",
+    "frame": { "x": 0, "y": 0, "w": 40, "h": 143 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 40, "h": 143 },
+    "sourceSize": { "w": 40, "h": 143 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.3.11-dev",
+  "image": "powertower.png",
+  "format": "RGBA8888",
+  "size": { "w": 40, "h": 143 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}
