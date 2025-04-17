@@ -29,4 +29,4 @@ for lua_file in src_text_path.glob("*.lua"):
 # 打包游戏
 os.chdir("..")
 # 记得定期改版本号
-os.system(f"7z a -tzip 'translate/gamebuild/Petrichor-V1.love' ./ -xr!translate")
+os.system(f"7z a -tzip translate/gamebuild/Petrichor-V1.love ./ -xr!translate")
