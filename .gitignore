@@ -1,5 +1,5 @@
 # ---> Lua
-/gamebuild
+gamebuild
 # Compiled Lua sources
 luac.out
 

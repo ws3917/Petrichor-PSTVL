@@ -294,93 +294,93 @@ local function textGen(pager)
             name = function() return accessor.item_glove1 and accessor.item_glove2 and "Work Gloves" or "Work Glove" end,
             info = function()
                 return accessor.item_glove1 and accessor.item_glove2 and ({
-                    "<p:player>(An insulated glove. Good for handling dangerous items.)"
-                }) or ({
-                    "<p:player>(A pair of insulated gloves. Good for handling dangerous items.)"
-                })
+"<p:player>(An insulated glove. Good for handling dangerous items.)"
+}) or ({
+"<p:player>(A pair of insulated gloves. Good for handling dangerous items.)"
+})
             end
         },
         item_boots = {
             name = function() return accessor.item_boot1 and accessor.item_boot2 and "Work Boots" or "Work Boot" end,
             info = function()
                 return accessor.item_boot1 and accessor.item_boot2 and ({
-                    "<p:player>(A sturdy, high-topped boot. Good for traversing hazards.)"
-                }) or ({
-                    "<p:player>(A pair of sturdy, high-topped boots. Good for traversing hazards.)"
-                })
+"<p:player>(A sturdy, high-topped boot. Good for traversing hazards.)"
+}) or ({
+"<p:player>(A pair of sturdy, high-topped boots. Good for traversing hazards.)"
+})
             end
         },
         ponder_arrival = pager:create(0, {
-            "<p:player><f:sad>...",
-            "<p:player><f:sad>(The forest is beautiful...)"
-        }, {
-            "<p:player><f:sad>...",
-            "<p:player><f:sigh>(I have to keep going...)",
-            "<p:player>(Standing around won't get me any closer to home.)"
-        }),
+"<p:player><f:sad>...",
+"<p:player><f:sad>(The forest is beautiful...)"
+}, {
+"<p:player><f:sad>...",
+"<p:player><f:sigh>(I have to keep going...)",
+"<p:player>(Standing around won't get me any closer to home.)"
+}),
         ponder_chase = pager:create(0, {
-            "<p:player><f:side>(If I could just talk to them...)",
-            "<p:player><f:determined2>(... there's no time to lose!)"
-        }, {
-            "<p:player><f:determined>(... I've got to catch up to them!)"
-        }),
+"<p:player><f:side>(If I could just talk to them...)",
+"<p:player><f:determined2>(... there's no time to lose!)"
+}, {
+"<p:player><f:determined>(... I've got to catch up to them!)"
+}),
         ponder_gate = {
-            "<p:player><f:side>...",
-            "<p:player><f:side>(I need a closer look at that gate...)"
-        },
+"<p:player><f:side>...",
+"<p:player><f:side>(I need a closer look at that gate...)"
+},
         ponder_shock = function()
             return {
                 "<p:player><f:side>(... hm...)",
                 unpack(accessor.item_glove1 and accessor.item_glove2 and accessor.item_boot1 and accessor.item_boot2 and
                     ({
-                        "<p:player><f:side>(I have these gloves... and these boots...)",
-                        "<p:player>(Oh! I can use these to climb the gate safely!)"
-                    }) or
+"<p:player><f:side>(I have these gloves... and these boots...)",
+"<p:player>(Oh! I can use these to climb the gate safely!)"
+}) or
                     (accessor.item_glove1 and accessor.item_glove2 and ((accessor.item_boot1 or accessor.item_boot2) and ({
-                        "<p:player><f:side>(I have these gloves... and this boot...)",
-                        "<p:player>(With one more boot, I could climb the gate safely.)"
-                    }) or ({
-                        "<p:player><f:side>(I have these gloves...)",
-                        "<p:player>(If I had something to protect my feet, I could climb the gate safely.)"
-                    })) or (accessor.item_boot1 and accessor.item_boot2 and ((accessor.item_glove1 or accessor.item_glove2) and ({
-                        "<p:player><f:side>(I have these boots... and this glove...)",
-                        "<p:player>(With one more glove, I could climb the gate safely.)"
-                    }) or ({
-                        "<p:player><f:side>(I have these boots...)",
-                        "<p:player>(If I had something to protect my hands, I could climb the gate safely.)"
-                    })) or ((accessor.item_glove1 or accessor.item_glove2) and ((accessor.item_boot1 or accessor.item_boot2) and ({
-                        "<p:player><f:side>(I have this glove... and this boot...)",
-                        "<p:player>(If only I could duplicate them, I could climb the gate safely.)"
-                    }) or ({
-                        "<p:player><f:side>(I have this glove...)",
-                        "<p:player><f:side>(If I had another glove, and something to protect my feet...)",
-                        "<p:player>(... I could climb the gate safely.)"
-                    })) or ((accessor.item_boot1 or accessor.item_boot2) and ({
-                        "<p:player><f:side>(I have this boot...)",
-                        "<p:player><f:side>(If I had another boot, and something to protect my hands...)",
-                        "<p:player>(... I could climb the gate safely.)"
-                    }) or ({
-                        "<p:player><f:side>(If I had some extra gear to protect myself...)",
-                        "<p:player>(... I could climb the gate safely.)"
-                    }))))))
+"<p:player><f:side>(I have these gloves... and this boot...)",
+"<p:player>(With one more boot, I could climb the gate safely.)"
+}) or ({
+"<p:player><f:side>(I have these gloves...)",
+"<p:player>(If I had something to protect my feet, I could climb the gate safely.)"
+})) or (accessor.item_boot1 and accessor.item_boot2 and ((accessor.item_glove1 or accessor.item_glove2) and ({
+"<p:player><f:side>(I have these boots... and this glove...)",
+"<p:player>(With one more glove, I could climb the gate safely.)"
+}) or ({
+"<p:player><f:side>(I have these boots...)",
+"<p:player>(If I had something to protect my hands, I could climb the gate safely.)"
+})) or ((accessor.item_glove1 or accessor.item_glove2) and ((accessor.item_boot1 or accessor.item_boot2) and ({
+"<p:player><f:side>(I have this glove... and this boot...)",
+"<p:player>(If only I could duplicate them, I could climb the gate safely.)"
+}) or ({
+"<p:player><f:side>(I have this glove...)",
+"<p:player><f:side>(If I had another glove, and something to protect my feet...)",
+"<p:player>(... I could climb the gate safely.)"
+})) or ((accessor.item_boot1 or accessor.item_boot2) and ({
+"<p:player><f:side>(I have this boot...)",
+"<p:player><f:side>(If I had another boot, and something to protect my hands...)",
+"<p:player>(... I could climb the gate safely.)"
+}) or ({
+"<p:player><f:side>(If I had some extra gear to protect myself...)",
+"<p:player>(... I could climb the gate safely.)"
+}))))))
             }
         end,
         ponder_gear = {
-            "<p:player><f:side>(... I think, with this extra gear I've found...)",
-            "<p:player>(... climbing the gate should be safe.)"
-        },
+"<p:player><f:side>(... I think, with this extra gear I've found...)",
+"<p:player>(... climbing the gate should be safe.)"
+},
         ponder_unlock = {
-            "<p:player>(... hm.)",
-            "<p:player><f:sigh>(Better get going before someone closes the gate again.)"
-        },
+"<p:player>(... hm.)",
+"<p:player><f:sigh>(Better get going before someone closes the gate again.)"
+},
         ponder_factory = pager:create(0, {
-            "<p:player><f:side>(... if I had to guess, I'd say this was a syrup factory...)",
-            "<p:player>(Definitely a factory of some kind, anyway.)",
-            "<p:player><f:confused>(Shouldn't there be tons of people working here?)"
-        }, {
-            "<p:player>...",
-            "<p:player><f:sweat4>(... maybe the workers are all on vacation.)"
-        }),
+"<p:player><f:side>(... if I had to guess, I'd say this was a syrup factory...)",
+"<p:player>(Definitely a factory of some kind, anyway.)",
+"<p:player><f:confused>(Shouldn't there be tons of people working here?)"
+}, {
+"<p:player>...",
+"<p:player><f:sweat4>(... maybe the workers are all on vacation.)"
+}),
         overworld = {
             tutorial1 = "Press [X] while moving\nto sprint.",
             tutorial2 = "Press [←] [→] to climb.",
@@ -389,203 +389,203 @@ local function textGen(pager)
             pipewerx3 = "(Arrange the pipes to connect\nthe two endpoints.)",
             pipewerx4 = "(Press [X] to exit.)",
             system1 = {
-                "Platform Engaged.",
-                "Selecting Mode: Transit",
-                "Selecting Destination: CRIMSON",
-                "Transit In Progress..."
-            },
+"Platform Engaged.",
+"Selecting Mode: Transit",
+"Selecting Destination: CRIMSON",
+"Transit In Progress..."
+},
             system2 = "`~1!2@3#4$5%6^7&8*9(0)-_=+[]\\|;:'\",<.>/?",
             arrival1 = {
-                "<p:player><f:sweat>..."
-            },
+"<p:player><f:sweat>..."
+},
             arrival2 = {
-                "<p:player><f:side>(It's the same as before...)",
-                "<p:player><f:sweat4>(... guess I... didn't really know what I was expecting.)"
-            },
+"<p:player><f:side>(It's the same as before...)",
+"<p:player><f:sweat4>(... guess I... didn't really know what I was expecting.)"
+},
             arrival3 = {
-                "<p:player><f:what>Whoa."
-            },
+"<p:player><f:what>Whoa."
+},
             arrival4 = {
-                "<p:player><f:what>That's big."
-            },
+"<p:player><f:what>That's big."
+},
             arrival5 = {
-                "<p:player><f:sigh>(Well, it's not home.)",
-                "<p:player>(But it's... also not that weird house.)",
-                "<p:player><f:side>(So that's good.)"
-            },
+"<p:player><f:sigh>(Well, it's not home.)",
+"<p:player>(But it's... also not that weird house.)",
+"<p:player><f:side>(So that's good.)"
+},
             arrival6 = {
-                "<p:player><f:sad>(... I wish...)",
-                "<p:player><f:sigh>(... I had an umbrella.)"
-            },
+"<p:player><f:sad>(... I wish...)",
+"<p:player><f:sigh>(... I had an umbrella.)"
+},
             stowaway1 = {
-                "<p:player><f:sweat>...",
-                "<p:player><f:sweat3>H... hello?"
-            },
+"<p:player><f:sweat>...",
+"<p:player><f:sweat3>H... hello?"
+},
             stowaway2 = {
-                "<p:player><f:sad2>Wait, don't go! I..."
-            },
+"<p:player><f:sad2>Wait, don't go! I..."
+},
             stowaway3 = {
-                "<p:player><f:determined>... get back here!"
-            },
+"<p:player><f:determined>... get back here!"
+},
             stowaway4 = {
-                "<p:player><f:determined2>Hey, you!"
-            },
+"<p:player><f:determined2>Hey, you!"
+},
             stowaway5 = {
-                "<p:player><f:sweat3>(There's nothing to be afraid of...)"
-            },
+"<p:player><f:sweat3>(There's nothing to be afraid of...)"
+},
             stowaway6 = {
-                "<p:player><f:upset2>No, no, no!"
-            },
+"<p:player><f:upset2>No, no, no!"
+},
             stowaway7 = {
-                "<p:player><f:annoyed>(... slam the gate on me, why don't you...)"
-            },
+"<p:player><f:annoyed>(... slam the gate on me, why don't you...)"
+},
             bushitem1 = {
-                "<p:player><f:side>(There's something buried in here...)",
-                "<p:none>Pick it up?"
-            },
+"<p:player><f:side>(There's something buried in here...)",
+"<p:none>Pick it up?"
+},
             bushitem2 = {
-                "Yes",
-                "No"
-            },
+"Yes",
+"No"
+},
             glover0 = "Work Glove",
             glover1 = {
-                "<p:player><f:surprise>(A glove!)",
-                "<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Work Glove.",
-                "<p:player><f:sodesuka>(Feels... tough.)"
-            },
+"<p:player><f:surprise>(A glove!)",
+"<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Work Glove.",
+"<p:player><f:sodesuka>(Feels... tough.)"
+},
             glover2 = {
-                "<p:player><f:surprise>(Another glove!)",
-                "<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Work Glove."
-            },
+"<p:player><f:surprise>(Another glove!)",
+"<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Work Glove."
+},
             glovey1 = {
-                "<p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Work Glove.",
-                "<p:player><f:surprise>(A glove!)",
-                "<p:player><f:sodesuka>(Feels... tough.)"
-            },
+"<p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Work Glove.",
+"<p:player><f:surprise>(A glove!)",
+"<p:player><f:sodesuka>(Feels... tough.)"
+},
             glovey2 = {
-                "<p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Work Glove.",
-                "<p:player><f:surprise>(Another glove!)"
-            },
+"<p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Work Glove.",
+"<p:player><f:surprise>(Another glove!)"
+},
             bootey1 = {
-                "<p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Work Boot.",
-                "<p:player>(... a single boot.)",
-                "<p:player><f:sigh>(Surely there's another one around, right?)"
-            },
+"<p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Work Boot.",
+"<p:player>(... a single boot.)",
+"<p:player><f:sigh>(Surely there's another one around, right?)"
+},
             bootey2 = {
-                "<p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Work Boot.",
-                "<p:player><f:sigh>(Ah, there it is.)"
-            },
+"<p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Work Boot.",
+"<p:player><f:sigh>(Ah, there it is.)"
+},
             booter0 = "Work Boot",
             booter1 = {
-                "<p:player>(... a single boot.)",
-                "<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Work Boot.",
-                "<p:player><f:sigh>(Surely there's another one around, right?)"
-            },
+"<p:player>(... a single boot.)",
+"<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Work Boot.",
+"<p:player><f:sigh>(Surely there's another one around, right?)"
+},
             booter2 = {
-                "<p:player><f:sigh>(Ah, there it is.)",
-                "<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Work Boot."
-            },
+"<p:player><f:sigh>(Ah, there it is.)",
+"<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Work Boot."
+},
             drillie1 = pager:create(0, {
-                "<p:player><f:sigh>(I could just use this drill to open the gate...)",
-                "<p:player>(... but in doing so, its batteries would be completely drained.)",
-                "<p:player><f:confused>(Would I be able to replace them?)"
-            }, {
-                "<p:player><f:confused>(Should I use the drill to open the gate, or save it for later?)"
-            }),
+"<p:player><f:sigh>(I could just use this drill to open the gate...)",
+"<p:player>(... but in doing so, its batteries would be completely drained.)",
+"<p:player><f:confused>(Would I be able to replace them?)"
+}, {
+"<p:player><f:confused>(Should I use the drill to open the gate, or save it for later?)"
+}),
             drillie2 = {
-                "Use The Drill",
-                "Find Another Way"
-            },
+"Use The Drill",
+"Find Another Way"
+},
             drillie3 = {
-                "<p:player>..."
-            },
+"<p:player>..."
+},
             drillie4 = {
-                "<p:player><f:sigh>(... that did the trick.)"
-            },
+"<p:player><f:sigh>(... that did the trick.)"
+},
             gateclimb0 = "Gate",
             gateclimb1 = {
-                "<p:player><f:side>...",
-                "<p:player><f:surprise>(Ah! Of course!)",
-                "<p:player><f:determined2>(I'll just climb over it!)"
-            },
+"<p:player><f:side>...",
+"<p:player><f:surprise>(Ah! Of course!)",
+"<p:player><f:determined2>(I'll just climb over it!)"
+},
             gateclimb2a = {
-                "<p:player><f:annoyed>... ugh..."
-            },
+"<p:player><f:annoyed>... ugh..."
+},
             gateclimb2b = {
-                "<p:player><f:sweat5>(... guess I'll have to find something else.)"
-            },
+"<p:player><f:sweat5>(... guess I'll have to find something else.)"
+},
             gateclimb2c = {
-                "<p:player><f:side>(Wait. I have these gloves and boots...)",
-                "<p:player>(I could try again with the extra gear to protect myself.)",
-                "<p:none>Climb over the gate?"
-            },
+"<p:player><f:side>(Wait. I have these gloves and boots...)",
+"<p:player>(I could try again with the extra gear to protect myself.)",
+"<p:none>Climb over the gate?"
+},
             gateclimb3 = {
-                "<p:player><f:sweat>(It's electrically charged.)"
-            },
+"<p:player><f:sweat>(It's electrically charged.)"
+},
             gateclimb4 = {
-                "<p:player><f:sigh>(Can't climb over the gate without extra gear.)"
-            },
+"<p:player><f:sigh>(Can't climb over the gate without extra gear.)"
+},
             gateclimb5 = pager:create(
                 0,
                 function()
                     local ____array_0 = __TS__SparseArrayNew(unpack(accessor.event_redleaf_gateclimb == 2 and ({
-                        "<p:player>(I have the extra gear I need to protect myself.)"
-                    }) or ({
-                        "<p:player><f:side>(Wait. I have these gloves and boots now...)",
-                        "<p:player>(I could try again with the extra gear to protect myself.)"
-                    })))
+"<p:player>(I have the extra gear I need to protect myself.)"
+}) or ({
+"<p:player><f:side>(Wait. I have these gloves and boots now...)",
+"<p:player>(I could try again with the extra gear to protect myself.)"
+})))
                     __TS__SparseArrayPush(____array_0, "<p:none>Climb over the gate?")
                     return { __TS__SparseArraySpread(____array_0) }
                 end,
                 {
-                    "<p:none>Climb over the gate?"
-                }
+"<p:none>Climb over the gate?"
+}
             ),
             gateclimb6 = {
-                "Yes",
-                "No"
-            },
+"Yes",
+"No"
+},
             gateclimb7 = {
-                "<p:player><f:sigh>(Third climb's the charm. placeholder :3)"
-            },
+"<p:player><f:sigh>(Third climb's the charm. placeholder :3)"
+},
             gateclimb8 = {
-                "<p:player><f:determined2>(Alright!)"
-            },
+"<p:player><f:determined2>(Alright!)"
+},
             gateclimb9 = {
-                "<p:player><f:confused>(Is this... a factory?)"
-            },
+"<p:player><f:confused>(Is this... a factory?)"
+},
             gateclimb10 = {
-                "<p:player><f:sodesuka>(Time to find out what that rascal was up to.)"
-            }
+"<p:player><f:sodesuka>(Time to find out what that rascal was up to.)"
+}
         },
         trivia = {
             tree = {
-                "<p:player><f:surprise>It's a tree! (placeholder :3)"
-            },
+"<p:player><f:surprise>It's a tree! (placeholder :3)"
+},
             barrel = {
-                "<p:player><f:side>Barrel barrel barrel- (placeholder :3)"
-            },
+"<p:player><f:side>Barrel barrel barrel- (placeholder :3)"
+},
             lid = {
-                "<p:player><f:annoyed>A lid. (placeholder :3)"
-            },
+"<p:player><f:annoyed>A lid. (placeholder :3)"
+},
             facsign = {
-                "<p:player>\"REDLEAF INDUSTRIES\"\n\"Factory Grounds Nearby\""
-            },
+"<p:player>\"REDLEAF INDUSTRIES\"\n\"Factory Grounds Nearby\""
+},
             sapsign = {
-                "<p:player>\"Kotokura Syrup Exports\"\n\"Redleaf Industries\""
-            },
+"<p:player>\"Kotokura Syrup Exports\"\n\"Redleaf Industries\""
+},
             carsign = pager:create(0, {
-                "<p:player><f:sweat>\"Danger: Industrial Vehicles\"",
-                "<p:player><f:side>(Guess I should be careful...)"
-            }, {
-                "<p:player><f:sweat>\"Danger: Industrial Vehicles\""
-            }),
+"<p:player><f:sweat>\"Danger: Industrial Vehicles\"",
+"<p:player><f:side>(Guess I should be careful...)"
+}, {
+"<p:player><f:sweat>\"Danger: Industrial Vehicles\""
+}),
             powertower = {
-                "<p:player><f:confused>A powertower? (placeholder :3)"
-            },
+"<p:player><f:confused>A powertower? (placeholder :3)"
+},
             placeholder2 = pager:create(0, {
-                "<p:player>placeholder :3"
-            })
+"<p:player>placeholder :3"
+})
         },
         trivia_tooltip = {
             tree = "Tree",

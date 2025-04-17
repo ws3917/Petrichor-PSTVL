@@ -2,7 +2,7 @@ from tools import *
 
 # 设置工作文件夹为 translate
 os.chdir("translate")
-WEBLATE_PATH = "/home/ws3917/PS-Outertale/weblate"
+WEBLATE_PATH = "/home/ws3917/Code/Weblate"
 # 【导入部分】正常翻译时例行维护游戏翻译、导入、测试
 # 拉取weblate仓库更改
 os.system(f"cd {WEBLATE_PATH} && git pull")
@@ -29,6 +29,4 @@ for lua_file in src_text_path.glob("*.lua"):
 # 打包游戏
 os.chdir("..")
 # 记得定期改版本号
-os.system(
-    f"7z a -tzip 'translate/gamebuild/Petrichor-V1-{datetime.today()}.love' ./ -xr!translate"
-)
+os.system(f"7z a -tzip 'translate/gamebuild/Petrichor-V1.love' ./ -xr!translate")

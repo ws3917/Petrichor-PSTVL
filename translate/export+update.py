@@ -2,12 +2,12 @@ from tools import *
 
 # 设置工作文件夹为 translate
 os.chdir("translate")
-WEBLATE_PATH = "/home/ws3917/PS-Outertale/weblate"
+WEBLATE_PATH = "/home/ws3917/Code/Weblate"
 
 # 【导出部分】只有第一次或原文有更新的时候需要跑一次，正常情况下不需要
 # 将原文带文本的lua文件复制到text文件夹 - 【注意】只有第一次和版本升级时需要运行！
 # 如果text/en_US文件夹已经有文件，就千万千万不要再执行了（否则原文会被替换成半英半中的混合体）
-initialize_files_lua()
+# initialize_files_lua()
 for lua_file in src_text_path.glob("*.lua"):
     # 根据lua生成英文文本json
     export_translation_json(lua_file, f"strings/{lua_file.stem}/en_US.json")

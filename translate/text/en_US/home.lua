@@ -248,67 +248,67 @@ local function textGen(pager)
             name = "Book",
             info = function()
                 return ({ {
-                    "<p:none>\"The Jensen Paradox, third installment in the Jensen series.\"",
-                    "<p:none>\"How will they escape last time?\""
-                }, {
-                    "<p:none>\"Surface Tension, the hotel nobody ever leaves.\"",
-                    "<p:none>\"An endless maze of hallways, doors, swimming pools and libraries...\""
-                }, {
-                    "<p:none>\"Astrae Symphonia, a tale of intrigue, emotion, and music.\"",
-                    "<p:none>\"Follow this rogue starship to the edge of the galaxy!\""
-                } })[accessor.choice_home_book + 1]
+"<p:none>\"The Jensen Paradox, third installment in the Jensen series.\"",
+"<p:none>\"How will they escape last time?\""
+}, {
+"<p:none>\"Surface Tension, the hotel nobody ever leaves.\"",
+"<p:none>\"An endless maze of hallways, doors, swimming pools and libraries...\""
+}, {
+"<p:none>\"Astrae Symphonia, a tale of intrigue, emotion, and music.\"",
+"<p:none>\"Follow this rogue starship to the edge of the galaxy!\""
+} })[accessor.choice_home_book + 1]
             end
         },
         item_rock = { name = "Rocks" },
         item_batteries = {
             name = "Batteries",
             info = {
-                "<p:player>(Type four batteries. Good for small devices and tools.)"
-            }
+"<p:player>(Type four batteries. Good for small devices and tools.)"
+}
         },
         item_cover = {
             name = function() return accessor.item_scissors and "Blanket Rope" or "Blanket" end,
             info = function()
                 return accessor.item_scissors and ({
-                    "<p:player>(A makeshift \"rope\" made from pieces of a blanket.)"
-                }) or ({
-                    "<p:player>(A comfortable blanket. Haven't found something to cut it with yet.)"
-                })
+"<p:player>(A makeshift \"rope\" made from pieces of a blanket.)"
+}) or ({
+"<p:player>(A comfortable blanket. Haven't found something to cut it with yet.)"
+})
             end
         },
         item_crowbar = {
             name = "Metal Bar",
             info = {
-                "<p:player>(One bar of pure bed frame.)",
-                "<p:player><f:sweat4>(It's really heavy.)"
-            }
+"<p:player>(One bar of pure bed frame.)",
+"<p:player><f:sweat4>(It's really heavy.)"
+}
         },
         ponder_book = pager:create(0, {
-            "<p:none>(You ponder why you're still awake.)",
-            "<p:none>(You realize you don't have a book to read in bed.)"
-        }, {
-            "<p:none>(You ponder what kind of book you'd like to read.)",
-            "<p:none>(You're realize you're in the mood for something novel.)"
-        }),
+"<p:none>(You ponder why you're still awake.)",
+"<p:none>(You realize you don't have a book to read in bed.)"
+}, {
+"<p:none>(You ponder what kind of book you'd like to read.)",
+"<p:none>(You're realize you're in the mood for something novel.)"
+}),
         ponder_sleep = {
-            "<p:none>(You ponder why you're still awake.)",
-            "<p:none>(You realize you should probably go to bed now.)"
-        },
+"<p:none>(You ponder why you're still awake.)",
+"<p:none>(You realize you should probably go to bed now.)"
+},
         ponder_hello = {
-            "<p:player>...",
-            "<p:player>(I don't really know where I am.)",
-            "<p:player><f:sigh>(Exploring might give me a better idea...)"
-        },
+"<p:player>...",
+"<p:player>(I don't really know where I am.)",
+"<p:player><f:sigh>(Exploring might give me a better idea...)"
+},
         ponder_outside = pager:create(
             0,
             {
-                "<p:player><f:sweat>...",
-                "<p:player><f:sweat>(This... house... doesn't make any sense.)",
-                "<p:player><f:confused>(How is it just... floating?)",
-                "<p:player><f:confused>(Why is there nothing else out there?)",
-                "<p:player><f:side>(If I could find something to \"test\" this place...)",
-                "<p:player>(... it might give me a clue how to escape it.)"
-            },
+"<p:player><f:sweat>...",
+"<p:player><f:sweat>(This... house... doesn't make any sense.)",
+"<p:player><f:confused>(How is it just... floating?)",
+"<p:player><f:confused>(Why is there nothing else out there?)",
+"<p:player><f:side>(If I could find something to \"test\" this place...)",
+"<p:player>(... it might give me a clue how to escape it.)"
+},
             function()
                 return { "<p:player><f:sweat>(I'm looking for a way to escape.)",
                     "<p:player><f:sweat5>(To do that, I need to know what this place's limits are.)",
@@ -319,26 +319,26 @@ local function textGen(pager)
         ),
         ponder_platform = function()
             return accessor.item_cover and (accessor.item_scissors and ({
-                "<p:player>(So far, I've cut this blanket and made it into a rope.)",
-                "<p:player><f:side>(Now, I just need something to hold it in place for the climb...)",
-                "<p:player>(... something strong and sturdy, like metal.)"
-            }) or ({
-                "<p:player>(So far, I've found a blanket, which I can make into a rope.)",
-                "<p:player><f:sigh>(I still need something to cut it with.)"
-            })) or ({
-                "<p:player><f:determined>(I need to find a way down to that platform.)",
-                "<p:player>(It's too far to jump, so I'll have to try something else.)",
-                "<p:player><f:side>(A rope would do the trick...)"
-            })
+"<p:player>(So far, I've cut this blanket and made it into a rope.)",
+"<p:player><f:side>(Now, I just need something to hold it in place for the climb...)",
+"<p:player>(... something strong and sturdy, like metal.)"
+}) or ({
+"<p:player>(So far, I've found a blanket, which I can make into a rope.)",
+"<p:player><f:sigh>(I still need something to cut it with.)"
+})) or ({
+"<p:player><f:determined>(I need to find a way down to that platform.)",
+"<p:player>(It's too far to jump, so I'll have to try something else.)",
+"<p:player><f:side>(A rope would do the trick...)"
+})
         end,
         ponder_exit = pager:create(0, {
-            "<p:player><f:sigh>...",
-            "<p:player><f:sigh>(It's strange... omething about this house is comfortable.)",
-            "<p:player><f:side>(In another life, I could see myself living here...)"
-        }, {
-            "<p:player>(There's nothing else for me to do here.)",
-            "<p:player><f:sigh>(It's time to go.)"
-        }),
+"<p:player><f:sigh>...",
+"<p:player><f:sigh>(It's strange... omething about this house is comfortable.)",
+"<p:player><f:side>(In another life, I could see myself living here...)"
+}, {
+"<p:player>(There's nothing else for me to do here.)",
+"<p:player><f:sigh>(It's time to go.)"
+}),
         overworld = {
             start1 = "WARNING",
             start2 =
@@ -354,54 +354,54 @@ local function textGen(pager)
             tutorial7 = "Hold [Z], then release.",
             tutorial8 = "Press [←] [→] to climb.",
             blocker1 = {
-                "<p:none>(You'll be safer indoors this late at night.)"
-            },
+"<p:none>(You'll be safer indoors this late at night.)"
+},
             blocker2 = {
-                "<p:none>(You're forgetting something.)"
-            },
+"<p:none>(You're forgetting something.)"
+},
             blocker3 = {
-                "<p:none>Go upstairs and complete the tutorial?"
-            },
+"<p:none>Go upstairs and complete the tutorial?"
+},
             blocker4 = {
-                "Go Upstairs",
-                "Not Yet"
-            },
+"Go Upstairs",
+"Not Yet"
+},
             blocker5 = {
-                "<p:none>Go outside and climb down to the golden platform?"
-            },
+"<p:none>Go outside and climb down to the golden platform?"
+},
             blocker6 = {
-                "Go Outside",
-                "Not Yet"
-            },
+"Go Outside",
+"Not Yet"
+},
             bookshelf1 = {
-                "<p:none>Get a book?"
-            },
+"<p:none>Get a book?"
+},
             bookshelf2 = {
-                "The Jensen Paradox (Action)",
-                "Surface Tension (Surreal)",
-                "Astrae Symphonia (Space)",
-                "Not Yet"
-            },
+"The Jensen Paradox (Action)",
+"Surface Tension (Surreal)",
+"Astrae Symphonia (Space)",
+"Not Yet"
+},
             bookshelf3 = {
-                "<h:a><p:none>(You got the Book.)"
-            },
+"<h:a><p:none>(You got the Book.)"
+},
             bookshelf4 = {
-                "<p:none>(You decide not to get a book.)"
-            },
+"<p:none>(You decide not to get a book.)"
+},
             hello1 = {
-                "<p:player><f:sweat>...",
-                "<p:player><f:sweat>(This isn't my bed.)"
-            },
+"<p:player><f:sweat>...",
+"<p:player><f:sweat>(This isn't my bed.)"
+},
             hello2 = {
-                "<p:player><f:sweat5>(... maybe I slept on the wrong antenna...)"
-            },
+"<p:player><f:sweat5>(... maybe I slept on the wrong antenna...)"
+},
             hello3 = {
-                "<p:player><f:what>(No, no... this isn't my home at all.)",
-                "<p:player><f:confused>(How did I get here? Did someone... kidnap me?)"
-            },
+"<p:player><f:what>(No, no... this isn't my home at all.)",
+"<p:player><f:confused>(How did I get here? Did someone... kidnap me?)"
+},
             hello4 = {
-                "<p:player><f:side>(I don't remember being taken...)"
-            },
+"<p:player><f:side>(I don't remember being taken...)"
+},
             goatplush0 = "Plushie",
             goatplush1 = pager:create(
                 0,
@@ -411,25 +411,25 @@ local function textGen(pager)
                     "<p:player><f:confused>(... did you follow me here, to this strange place?)", "<p:none>Pick them up?" }
                 end,
                 {
-                    "<p:none>Pick them up?"
-                }
+"<p:none>Pick them up?"
+}
             ),
             goatplush2 = {
-                "Yes",
-                "No"
-            },
+"Yes",
+"No"
+},
             goatplush3 = {
-                "<p:player><f:sigh>Come here, you.",
-                "<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Plushie.",
-                "<p:player><f:side>...",
-                "<p:player>(Maybe I should hold onto this for a while.)"
-            },
+"<p:player><f:sigh>Come here, you.",
+"<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Plushie.",
+"<p:player><f:side>...",
+"<p:player>(Maybe I should hold onto this for a while.)"
+},
             fusebox1 = function()
                 return {
                     "<p:player><f:side>(An electric routing box...)",
                     unpack(accessor.plot < 2 and ({
-                        "<p:player><f:sodesuka>(Maybe I can get main power back on.)"
-                    }) or ({}))
+"<p:player><f:sodesuka>(Maybe I can get main power back on.)"
+}) or ({}))
                 }
             end,
             fusebox2 = "KITCHEN",
@@ -441,38 +441,38 @@ local function textGen(pager)
             fusebox8 = "ON",
             fusebox9 = "OFF",
             lightswitch = {
-                "<p:player><f:sigh>(No power.)"
-            },
+"<p:player><f:sigh>(No power.)"
+},
             telecomm1 = function()
                 return {
                     "<p:player>(A comms device. Must be battery-powered.)",
                     unpack(accessor.plot < 2 and ({
-                        "<p:player><f:confused>(Only two receivers on the contact list...?)"
-                    }) or ({}))
+"<p:player><f:confused>(Only two receivers on the contact list...?)"
+}) or ({}))
                 }
             end,
             telecomm2 = {
-                "<p:none>What will you do?"
-            },
+"<p:none>What will you do?"
+},
             telecomm3a = {
-                "Call Work",
-                "Call Neighbors",
-                "Play Back Message",
-                "Never Mind"
-            },
+"Call Work",
+"Call Neighbors",
+"Play Back Message",
+"Never Mind"
+},
             telecomm3b = {
-                "Call Work",
-                "Call Neighbors",
-                "Never Mind"
-            },
+"Call Work",
+"Call Neighbors",
+"Never Mind"
+},
             telecomm4 = { {
-                "<p:none>(Calling... Work.)"
-            }, {
-                "<p:none>(Calling... Neighbors.)"
-            } },
+"<p:none>(Calling... Work.)"
+}, {
+"<p:none>(Calling... Neighbors.)"
+} },
             telecomm5 = {
-                "<p:none>(That Receiver Does Not Exist.)"
-            },
+"<p:none>(That Receiver Does Not Exist.)"
+},
             telecomm6 = function()
                 return {
                     "<p:none>(Beginning Playback...)",
@@ -482,12 +482,12 @@ local function textGen(pager)
                     unpack(accessor.state_home_telecomm_message == 0 and ({
                         "<h:a><p:player><f:annoyed>(Oh. It's just a scam.)",
                         unpack(accessor.event_home_outside and ({
-                            "<p:player><f:sweat5>(I'd delete the message, if it wasn't for the small possibility...)",
-                            "<p:player><f:sweat>(... that this might be the last other person's voice I hear.)"
-                        }) or ({
-                            "<p:player><f:sigh>(Nobody would mind if I deleted this, would they?)",
-                            "<h:b><p:none>(Message Deleted.)"
-                        }))
+"<p:player><f:sweat5>(I'd delete the message, if it wasn't for the small possibility...)",
+"<p:player><f:sweat>(... that this might be the last other person's voice I hear.)"
+}) or ({
+"<p:player><f:sigh>(Nobody would mind if I deleted this, would they?)",
+"<h:b><p:none>(Message Deleted.)"
+}))
                     }) or ({}))
                 }
             end,
@@ -498,122 +498,122 @@ local function textGen(pager)
                     "<p:player><f:sweat3>(Actually, before I go...)", "<p:none>Eat something from the fridge?" }
                 end,
                 {
-                    "<p:none>Eat something from the fridge?"
-                }
+"<p:none>Eat something from the fridge?"
+}
             ),
             fridge2 = {
-                "Boka Fruit",
-                "Tenzka Tracks Ice Cream",
-                "Morning Leftovers",
-                "Never Mind"
-            },
+"Boka Fruit",
+"Tenzka Tracks Ice Cream",
+"Morning Leftovers",
+"Never Mind"
+},
             fridge3 = { {
-                "<p:player><f:annoyed>(These better be home-grown.)"
-            }, {
-                "<p:player><f:surprise>(My favorite food! I must be lucky.)"
-            }, {
-                "<p:player>(... it's better than nothing.)"
-            }, {
-                "<p:player><f:sweat5>..."
-            } },
+"<p:player><f:annoyed>(These better be home-grown.)"
+}, {
+"<p:player><f:surprise>(My favorite food! I must be lucky.)"
+}, {
+"<p:player>(... it's better than nothing.)"
+}, {
+"<p:player><f:sweat5>..."
+} },
             fridge4 = { {
-                "<p:player><f:sodesuka>(Huh. Those were actually pretty good.)"
-            }, {
-                "<p:player><f:sweat4>(... might've eaten too much.)"
-            }, {
-                "<p:player>..."
-            } },
+"<p:player><f:sodesuka>(Huh. Those were actually pretty good.)"
+}, {
+"<p:player><f:sweat4>(... might've eaten too much.)"
+}, {
+"<p:player>..."
+} },
             fridge5 = function()
                 return accessor.plot < 2 and ({
-                    "<p:player><f:sweat>(Oh... right.)",
-                    "<p:player><f:sweat5>(I'm still trying to get out of here.)"
-                }) or ({
-                    "<p:player>(... time to get back to what I was doing.)"
-                })
+"<p:player><f:sweat>(Oh... right.)",
+"<p:player><f:sweat5>(I'm still trying to get out of here.)"
+}) or ({
+"<p:player>(... time to get back to what I was doing.)"
+})
             end,
             outside1 = {
-                "<p:player><f:what>(What the...)",
-                "<p:player><f:what>..."
-            },
+"<p:player><f:what>(What the...)",
+"<p:player><f:what>..."
+},
             outside2 = {
-                "<p:player><f:upset2>(What IS this?)",
-                "<p:player><f:sad>(W... where am I?)"
-            },
+"<p:player><f:upset2>(What IS this?)",
+"<p:player><f:sad>(W... where am I?)"
+},
             outside3 = {
-                "<p:player><f:sweat5>(It's everywhere.)",
-                "<p:player><f:sweat3>(Everywhere I turn, it's just...)"
-            },
+"<p:player><f:sweat5>(It's everywhere.)",
+"<p:player><f:sweat3>(Everywhere I turn, it's just...)"
+},
             outside4 = {
-                "<p:player><f:sweat5>(I... I have to get out of here...)"
-            },
+"<p:player><f:sweat5>(I... I have to get out of here...)"
+},
             telescope1 = {
-                "<p:player><f:side>(The telescope...)"
-            },
+"<p:player><f:side>(The telescope...)"
+},
             telescope2 = {
-                "<p:player>(Maybe I'll spot something in the distance.)"
-            },
+"<p:player>(Maybe I'll spot something in the distance.)"
+},
             basket1a = {
-                "<p:player>...",
-                "<h:a><p:player><f:side>(Wait, that box on the bookshelf...)",
-                "<h:a><p:player><f:surprise>(It's the lockbox from the note!)"
-            },
+"<p:player>...",
+"<h:a><p:player><f:side>(Wait, that box on the bookshelf...)",
+"<h:a><p:player><f:surprise>(It's the lockbox from the note!)"
+},
             basket1b = {
-                "<p:player><f:side>(Hm...)"
-            },
+"<p:player><f:side>(Hm...)"
+},
             basket2 = {
-                "<p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Library Card.",
-                "<p:player><f:surprise>(There!)"
-            },
+"<p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Library Card.",
+"<p:player><f:surprise>(There!)"
+},
             basket3 = {
-                "<p:player><f:confused>(A library card...?)"
-            },
+"<p:player><f:confused>(A library card...?)"
+},
             bucket1 = function()
                 return accessor.plot < 3 and
                     (accessor.item_cover and accessor.item_scissors and not accessor.item_crowbar and ({
-                        "<p:player><f:side>(A rusty shovel. I'd use this as an anchor, but...)"
-                    }) or ({
-                        "<p:player><f:side>(A rusty shovel. Looks like it's...)"
-                    })) or ({
-                        "<p:player><f:side>(A rusty shovel...)"
-                    })
+"<p:player><f:side>(A rusty shovel. I'd use this as an anchor, but...)"
+}) or ({
+"<p:player><f:side>(A rusty shovel. Looks like it's...)"
+})) or ({
+"<p:player><f:side>(A rusty shovel...)"
+})
             end,
             bucket2 = function()
                 return {
                     "<p:player>(Wait.)",
                     unpack(accessor.plot < 2 and ({
-                        "<p:player><f:confused>(What about the pail?)"
-                    }) or ({
-                        "<p:player><f:sigh>(That pail might be come in handy.)"
-                    }))
+"<p:player><f:confused>(What about the pail?)"
+}) or ({
+"<p:player><f:sigh>(That pail might be come in handy.)"
+}))
                 }
             end,
             bucket3 = function()
                 local ____array_0 = __TS__SparseArrayNew(unpack(accessor.plot < 2 and ({
-                    "<p:player><f:confused>(... how could it be raining when there's nothing else outside?)",
-                    "<p:player><f:side>(Maybe I can learn something by collecting it, and...)",
-                    "<p:player><f:sweat>(Studying it, I guess.)",
-                    "<p:player><f:sigh>(... sounds stupid when I think about it like that, but still.)"
-                }) or ({
-                    "<p:player>(Just in case.)"
-                })))
+"<p:player><f:confused>(... how could it be raining when there's nothing else outside?)",
+"<p:player><f:side>(Maybe I can learn something by collecting it, and...)",
+"<p:player><f:sweat>(Studying it, I guess.)",
+"<p:player><f:sigh>(... sounds stupid when I think about it like that, but still.)"
+}) or ({
+"<p:player>(Just in case.)"
+})))
                 __TS__SparseArrayPush(____array_0, "<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Pail.")
                 return { __TS__SparseArraySpread(____array_0) }
             end,
             bucket4 = {
-                "<p:player><f:sodesuka>(Don't think I can collect any rain from here.)"
-            },
+"<p:player><f:sodesuka>(Don't think I can collect any rain from here.)"
+},
             rain1 = {
-                "<p:player><f:side>..."
-            },
+"<p:player><f:side>..."
+},
             rain2 = {
-                "<p:player><f:side>(That's weird...)",
-                "<p:player><f:side>(The rain's definitely going inside, but...)",
-                "<p:player><f:sodesuka>(It's... not filling up.)"
-            },
+"<p:player><f:side>(That's weird...)",
+"<p:player><f:side>(The rain's definitely going inside, but...)",
+"<p:player><f:sodesuka>(It's... not filling up.)"
+},
             rain3 = {
-                "<p:player><f:what>(Freaky.)",
-                "<p:player><f:sigh>(... guess I can't learn anything from this, though.)"
-            },
+"<p:player><f:what>(Freaky.)",
+"<p:player><f:sigh>(... guess I can't learn anything from this, though.)"
+},
             rope1 = function()
                 return { "<p:player>(It's a rope. There's not much of it left.)", accessor.plot == 2 and
                 "<p:player><f:sigh>(Doubt it's enough to reach the platform, but I'll take it anyway.)" or
@@ -621,95 +621,95 @@ local function textGen(pager)
                     "<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Rope." }
             end,
             rope2 = {
-                "<p:player><f:sodesuka>(No use for this indoors.)"
-            },
+"<p:player><f:sodesuka>(No use for this indoors.)"
+},
             dangle1 = {
-                "<p:player><f:side>(Hm...)"
-            },
+"<p:player><f:side>(Hm...)"
+},
             dangle2 = {
-                "<p:player><f:sigh>(No, it's nowhere NEAR long enough to get me down there.)"
-            },
+"<p:player><f:sigh>(No, it's nowhere NEAR long enough to get me down there.)"
+},
             dangle3 = function()
                 return accessor.item_cover and ({
-                    "<p:player>(... the blanket plan will have to do.)"
-                }) or ({
-                    "<p:player>(... maybe there's something else I could make a rope out of.)"
-                })
+"<p:player>(... the blanket plan will have to do.)"
+}) or ({
+"<p:player>(... maybe there's something else I could make a rope out of.)"
+})
             end,
             drill = {
-                "<p:player>(A heavy-duty electric drill. Might be useful.)",
-                "<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Drill.",
-                "<p:player><f:sigh>(Good thing these batteries were included.)"
-            },
+"<p:player>(A heavy-duty electric drill. Might be useful.)",
+"<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Drill.",
+"<p:player><f:sigh>(Good thing these batteries were included.)"
+},
             drill_tooltip = "Drill",
             broombox1 = {
-                "<p:player><f:sigh>(A box of old collector's rocks...)",
-                "<p:player>(... doubt they're important, so instead, I could try throwing them.)",
-                "<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Rock.",
-                "<p:player>(Off the edge.)",
-                "<h:b><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Rock.",
-                "<p:player>(To see what happens.)",
-                "<h:c><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Rock."
-            },
+"<p:player><f:sigh>(A box of old collector's rocks...)",
+"<p:player>(... doubt they're important, so instead, I could try throwing them.)",
+"<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Rock.",
+"<p:player>(Off the edge.)",
+"<h:b><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Rock.",
+"<p:player>(To see what happens.)",
+"<h:c><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Rock."
+},
             broombox2 = {
-                "<p:player><f:sigh>(It's worth a try.)"
-            },
+"<p:player><f:sigh>(It's worth a try.)"
+},
             broombox3 = {
-                "<p:player><f:sweat>(Throwing these indoors won't tell me anything.)"
-            },
+"<p:player><f:sweat>(Throwing these indoors won't tell me anything.)"
+},
             golden1 = {
-                "<p:player>(... right.)"
-            },
+"<p:player>(... right.)"
+},
             golden2 = {
-                "<p:player><f:sigh>...",
-                "<h:a><p:player><f:surprise>(Get ready...!)"
-            },
+"<p:player><f:sigh>...",
+"<h:a><p:player><f:surprise>(Get ready...!)"
+},
             golden3 = {
-                "<p:player><f:sweat3>...",
-                "<p:player><f:sweat3>(Maybe I didn't throw it far enough.)"
-            },
+"<p:player><f:sweat3>...",
+"<p:player><f:sweat3>(Maybe I didn't throw it far enough.)"
+},
             golden4 = {
-                "<p:player><f:sigh>(Here we go...)",
-                "<h:a><p:player><f:surprise>(... again!)"
-            },
+"<p:player><f:sigh>(Here we go...)",
+"<h:a><p:player><f:surprise>(... again!)"
+},
             golden5 = {
-                "<p:player><f:sad>...",
-                "<p:player><f:sad>(Nothing...)"
-            },
+"<p:player><f:sad>...",
+"<p:player><f:sad>(Nothing...)"
+},
             golden6 = {
-                "<p:player><f:sigh>...",
-                "<p:player><f:sigh>(... what if I just...)"
-            },
+"<p:player><f:sigh>...",
+"<p:player><f:sigh>(... what if I just...)"
+},
             golden7 = {
-                "<p:player><f:what>..."
-            },
+"<p:player><f:what>..."
+},
             golden8 = {
-                "<p:player><f:what>(That's new.)"
-            },
+"<p:player><f:what>(That's new.)"
+},
             golden9 = {
-                "<p:player><f:side>...",
-                "<p:player><f:side>(Doesn't look like part of the house...)",
-                "<p:player><f:confused>(Could that be what's behind all of this?)",
-                "<p:player><f:sweat3>...",
-                "<p:player><f:sweat3>(Maybe it's silly, but if...)",
-                "<p:player><f:sweat>(If I could get down there somehow...)"
-            },
+"<p:player><f:side>...",
+"<p:player><f:side>(Doesn't look like part of the house...)",
+"<p:player><f:confused>(Could that be what's behind all of this?)",
+"<p:player><f:sweat3>...",
+"<p:player><f:sweat3>(Maybe it's silly, but if...)",
+"<p:player><f:sweat>(If I could get down there somehow...)"
+},
             golden10 = {
-                "<p:player><f:determined>(... I might just be able to escape!)"
-            },
+"<p:player><f:determined>(... I might just be able to escape!)"
+},
             scissors1 = function()
                 local ____array_1 = __TS__SparseArrayNew(unpack(accessor.item_cover and ({
-                    "<p:player><f:surprise>(Scissors! For the blanket!)"
-                }) or ({
-                    "<p:player><f:side>(Scissors...)",
-                    "<p:player>(Could be good to have these on hand.)"
-                })))
+"<p:player><f:surprise>(Scissors! For the blanket!)"
+}) or ({
+"<p:player><f:side>(Scissors...)",
+"<p:player>(Could be good to have these on hand.)"
+})))
                 __TS__SparseArrayPush(
                     ____array_1,
                     "<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Scissors.",
                     unpack(accessor.item_cover and ({
-                        "<p:player><f:sweat4>(Sorry, little blanket...)"
-                    }) or ({}))
+"<p:player><f:sweat4>(Sorry, little blanket...)"
+}) or ({}))
                 )
                 return { __TS__SparseArraySpread(____array_1) }
             end,
@@ -717,16 +717,16 @@ local function textGen(pager)
                 return {
                     "<p:player><f:side>(... that's that taken care of...)",
                     unpack(accessor.item_crowbar and ({
-                        "<p:player><f:surprise>(Oh! And I can use the bed frame as an anchor!)"
-                    }) or ({
-                        "<p:player><f:sweat>(Now I need something to anchor the \"rope\" to once I'm outside.)"
-                    }))
+"<p:player><f:surprise>(Oh! And I can use the bed frame as an anchor!)"
+}) or ({
+"<p:player><f:sweat>(Now I need something to anchor the \"rope\" to once I'm outside.)"
+}))
                 }
             end,
             bed1 = {
-                "<p:player><f:side>(The bed...)",
-                "<p:player><f:sweat5>(... no...)"
-            },
+"<p:player><f:side>(The bed...)",
+"<p:player><f:sweat5>(... no...)"
+},
             bed2 = function()
                 return {
                     "<p:player><f:surprise>(The covers!)",
@@ -734,189 +734,189 @@ local function textGen(pager)
                     "<p:player><f:surprise>(... and make a rope out of it!)",
                     "<h:a><p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Blanket.",
                     unpack(accessor.item_scissors and ({
-                        "<p:player><f:sweat4>(Sorry, little blanket...)"
-                    }) or ({}))
+"<p:player><f:sweat4>(Sorry, little blanket...)"
+}) or ({}))
                 }
             end,
             bed3 = function()
                 return not accessor.item_scissors and ({
-                    "<p:player><f:sweat>(I'll need something to cut it with, though.)"
-                }) or (not accessor.item_crowbar and ({
-                    "<p:player><f:sweat>(Now I need something to anchor the \"rope\" to once I'm outside.)"
-                }) or ({
-                    "<p:player><f:surprise>(Oh! And I can use the bed frame as an anchor!)"
-                }))
+"<p:player><f:sweat>(I'll need something to cut it with, though.)"
+}) or (not accessor.item_crowbar and ({
+"<p:player><f:sweat>(Now I need something to anchor the \"rope\" to once I'm outside.)"
+}) or ({
+"<p:player><f:surprise>(Oh! And I can use the bed frame as an anchor!)"
+}))
             end,
             framer1 = function()
                 return {
                     "<p:player><f:side>(A metal bed frame. I wonder if I could take it apart...)",
                     unpack(accessor.item_drill and ({
-                        "<p:player>(... the drill should do nicely!)"
-                    }) or ({
-                        "<p:player>(... not by hand, that's for sure.)"
-                    }))
+"<p:player>(... the drill should do nicely!)"
+}) or ({
+"<p:player>(... not by hand, that's for sure.)"
+}))
                 }
             end,
             framer2 = function()
                 return {
                     "<p:none>{color=0xa289dc}Dysu{color=0xffffff} got the Metal Bar.",
                     unpack(accessor.item_cover and accessor.item_scissors and ({
-                        "<p:player><f:side>..."
-                    }) or ({
-                        "<p:player><f:surprise>(Nice!)"
-                    }))
+"<p:player><f:side>..."
+}) or ({
+"<p:player><f:surprise>(Nice!)"
+}))
                 }
             end,
             framer3 = {
-                "<p:player><f:surprise>(... wait! That's it!)",
-                "<p:player><f:side>(I'll attach the \"rope\" to the bar, place it behind the doorway...)",
-                "<p:player><f:determined2>(... and climb my way down to the platform!)"
-            },
+"<p:player><f:surprise>(... wait! That's it!)",
+"<p:player><f:side>(I'll attach the \"rope\" to the bar, place it behind the doorway...)",
+"<p:player><f:determined2>(... and climb my way down to the platform!)"
+},
             done1 = {
-                "<p:player><f:side>(I'll attach the \"rope\" to it, place it behind the doorway...)",
-                "<p:player><f:determined2>(... and climb my way down to the platform!)"
-            },
+"<p:player><f:side>(I'll attach the \"rope\" to it, place it behind the doorway...)",
+"<p:player><f:determined2>(... and climb my way down to the platform!)"
+},
             done2 = {
-                "<p:player><f:sweat5>(About time...)"
-            },
+"<p:player><f:sweat5>(About time...)"
+},
             exit1 = {
-                "<p:player><f:side>(Well, that should do it...)"
-            },
+"<p:player><f:side>(Well, that should do it...)"
+},
             exit2 = {
-                "<p:player><f:sweat>(Don't look down.)"
-            },
+"<p:player><f:sweat>(Don't look down.)"
+},
             exit3 = {
-                "<p:player><f:surprise>... I made it! I'm here!",
-                "<h:a><p:player><f:side>I'm actually..."
-            },
+"<p:player><f:surprise>... I made it! I'm here!",
+"<h:a><p:player><f:side>I'm actually..."
+},
             exit4 = {
-                "<p:player><f:what>(What the-)"
-            }
+"<p:player><f:what>(What the-)"
+}
         },
         trivia = {
             window = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(You peer through the window, observing the outdoor nightlife.)"
-                }) or (accessor.plot < 2 and (not accessor.event_home_outside and ({
-                    "<p:player><f:side>(That's weird...)",
-                    "<p:player>(... can't see anything out there.)"
-                }) or ({
-                    "<p:player><f:sweat>..."
-                })) or ({
-                    "<p:player><f:determined>..."
-                }))
+"<p:none>(You peer through the window, observing the outdoor nightlife.)"
+}) or (accessor.plot < 2 and (not accessor.event_home_outside and ({
+"<p:player><f:side>(That's weird...)",
+"<p:player>(... can't see anything out there.)"
+}) or ({
+"<p:player><f:sweat>..."
+})) or ({
+"<p:player><f:determined>..."
+}))
             end,
             bed = function()
                 return not accessor.item_cover and ({
-                    "<p:player><f:sweat4>(A surprisingly comfortable bed.)"
-                }) or (accessor.plot < 3 and ({
-                    "<p:player><f:sweat4>(Probably not as comfortable anymore.)"
-                }) or ({
-                    "<p:player>(A bed.)"
-                }))
+"<p:player><f:sweat4>(A surprisingly comfortable bed.)"
+}) or (accessor.plot < 3 and ({
+"<p:player><f:sweat4>(Probably not as comfortable anymore.)"
+}) or ({
+"<p:player>(A bed.)"
+}))
             end,
             computer = function()
                 return {
                     "<p:player>(A computer.)",
                     unpack(not accessor.event_home_outside and ({
-                        "<p:player><f:sigh>(The neural input looks worn out. Must have seen a lot of use.)"
-                    }) or (accessor.plot < 3 and ({
-                        "<p:player><f:sigh>(Without any power, it's just a box.)"
-                    }) or ({})))
+"<p:player><f:sigh>(The neural input looks worn out. Must have seen a lot of use.)"
+}) or (accessor.plot < 3 and ({
+"<p:player><f:sigh>(Without any power, it's just a box.)"
+}) or ({})))
                 }
             end,
             chair = function()
                 return accessor.plot < 3 and ({
-                    "<p:player>(Just a chair.)"
-                }) or ({
-                    "<p:player><f:sigh>(Despite everything, it's still just a chair.)"
-                })
+"<p:player>(Just a chair.)"
+}) or ({
+"<p:player><f:sigh>(Despite everything, it's still just a chair.)"
+})
             end,
             dresser1 = function()
                 return accessor.plot < 2 and ({
-                    "<p:player>(Lots of toys and trinkets in these drawers.)"
-                }) or (accessor.plot < 3 and ({
-                    "<p:player><f:sigh>(Now's not the time for souvenirs.)"
-                }) or ({
-                    "<p:player><f:sigh>(Toys and trinkets.)"
-                }))
+"<p:player>(Lots of toys and trinkets in these drawers.)"
+}) or (accessor.plot < 3 and ({
+"<p:player><f:sigh>(Now's not the time for souvenirs.)"
+}) or ({
+"<p:player><f:sigh>(Toys and trinkets.)"
+}))
             end,
             dresser2 = function()
                 return accessor.plot < 2 and ({
-                    "<p:player>(Nothing but antenna warmers in these drawers.)"
-                }) or (accessor.plot < 3 and ({
-                    "<p:player><f:sigh>(Antenna warmers won't help me reach the platform.)"
-                }) or ({
-                    "<p:player><f:sigh>(Antenna warmers.)"
-                }))
+"<p:player>(Nothing but antenna warmers in these drawers.)"
+}) or (accessor.plot < 3 and ({
+"<p:player><f:sigh>(Antenna warmers won't help me reach the platform.)"
+}) or ({
+"<p:player><f:sigh>(Antenna warmers.)"
+}))
             end,
             book = function()
                 return accessor.plot < 3 and ({ ({
-                        "<p:player><f:side>(\"The Jensen Paradox...\")",
-                        "<p:player><f:side>(\"Surface Tension...\")",
-                        "<p:player><f:side>(\"Astrae Symphonia...\")"
-                    })[accessor.choice_home_book + 1], accessor.plot < 2 and "<p:player>(Not a bad choice.)" or "<p:player><f:sweat>(... part of this story might be coming true.)" }) or
+"<p:player><f:side>(\"The Jensen Paradox...\")",
+"<p:player><f:side>(\"Surface Tension...\")",
+"<p:player><f:side>(\"Astrae Symphonia...\")"
+})[accessor.choice_home_book + 1], accessor.plot < 2 and "<p:player>(Not a bad choice.)" or "<p:player><f:sweat>(... part of this story might be coming true.)" }) or
                     ({ {
-                        "<p:player>(\"The Jensen Paradox.\")"
-                    }, {
-                        "<p:player>(\"Surface Tension.\")"
-                    }, {
-                        "<p:player>(\"Astrae Symphonia.\")"
-                    } })[accessor.choice_home_book + 1]
+"<p:player>(\"The Jensen Paradox.\")"
+}, {
+"<p:player>(\"Surface Tension.\")"
+}, {
+"<p:player>(\"Astrae Symphonia.\")"
+} })[accessor.choice_home_book + 1]
             end,
             cutetunnel = function()
                 return accessor.plot < 2 and ({
-                    "<p:player>(Painting of a wild arkette staring down a corridor.)"
-                }) or ({
-                    "<p:player><f:sigh>(... you and me both, little arkette.)"
-                })
+"<p:player>(Painting of a wild arkette staring down a corridor.)"
+}) or ({
+"<p:player><f:sigh>(... you and me both, little arkette.)"
+})
             end,
             toy = function()
                 return accessor.plot < 2 and ({
-                    "<p:player><f:confused>(A perpetual motion toy?)",
-                    "<p:player><f:sodesuka>(Wonder how long it's been going...)"
-                }) or (accessor.plot < 3 and ({
-                    "<p:player><f:confused>(Wait, wasn't this toy doing something earlier?)"
-                }) or ({
-                    "<p:player>(A simple toy.)"
-                }))
+"<p:player><f:confused>(A perpetual motion toy?)",
+"<p:player><f:sodesuka>(Wonder how long it's been going...)"
+}) or (accessor.plot < 3 and ({
+"<p:player><f:confused>(Wait, wasn't this toy doing something earlier?)"
+}) or ({
+"<p:player>(A simple toy.)"
+}))
             end,
             plant = function()
                 return {
                     "<p:player>(Baby boka tree.)",
                     unpack(accessor.plot < 2 and ({
-                        "<p:player><f:sweat3>(Seems like it's almost ready to be planted...)"
-                    }) or (accessor.plot < 3 and ({
-                        "<p:player><f:sigh>(Shame there's nowhere to plant this.)"
-                    }) or ({})))
+"<p:player><f:sweat3>(Seems like it's almost ready to be planted...)"
+}) or (accessor.plot < 3 and ({
+"<p:player><f:sigh>(Shame there's nowhere to plant this.)"
+}) or ({})))
                 }
             end,
             shovel = function()
                 return accessor.item_bucket and ({
-                        "<p:player><f:sigh>(A rusty shovel with a great big hole in it.)"
-                    }) or
+"<p:player><f:sigh>(A rusty shovel with a great big hole in it.)"
+}) or
                     (accessor.plot < 3 and (accessor.item_cover and accessor.item_scissors and not accessor.item_crowbar and ({
-                        "<p:player><f:side>(A rusty shovel. I'd use this as an anchor...)",
-                        "<p:player><f:sweat>(... if it wasn't such a piece of junk.)"
-                    }) or ({
-                        "<p:player>(A rusty shovel. Looks like it's about to fall apart.)"
-                    })) or ({
-                        "<p:player>(Useless shovel.)"
-                    }))
+"<p:player><f:side>(A rusty shovel. I'd use this as an anchor...)",
+"<p:player><f:sweat>(... if it wasn't such a piece of junk.)"
+}) or ({
+"<p:player>(A rusty shovel. Looks like it's about to fall apart.)"
+})) or ({
+"<p:player>(Useless shovel.)"
+}))
             end,
             broombox = function()
                 return accessor.item_rock and ({
-                    "<p:player><f:sigh>(An old broom with a broken handle.)"
-                }) or ({
-                    "<p:player>(An old broom and some fancy rocks. The broom's handle is broken.)"
-                })
+"<p:player><f:sigh>(An old broom with a broken handle.)"
+}) or ({
+"<p:player>(An old broom and some fancy rocks. The broom's handle is broken.)"
+})
             end,
             dresserdrawer1 = {
-                "<p:player><f:sigh>(An empty dresser drawer.)"
-            },
+"<p:player><f:sigh>(An empty dresser drawer.)"
+},
             dresserdrawer2 = {
-                "<p:player><f:sigh>(An empty dresser drawer. It's stuck open.)"
-            },
+"<p:player><f:sigh>(An empty dresser drawer. It's stuck open.)"
+},
             dresserpaper = function()
                 return {
                     "<p:player>\"After much deliberation, we have come to an agreement.\"",
@@ -928,222 +928,222 @@ local function textGen(pager)
             end,
             mattress = function()
                 return accessor.plot < 3 and ({
-                    "<p:player><f:sigh>(Don't think this mattress has ever been slept on.)"
-                }) or ({
-                    "<p:player>(Unused mattress.)"
-                })
+"<p:player><f:sigh>(Don't think this mattress has ever been slept on.)"
+}) or ({
+"<p:player>(Unused mattress.)"
+})
             end,
             bin = {
-                "<p:player>(An empty bin with a cleaning towel draped over the side.)"
-            },
+"<p:player>(An empty bin with a cleaning towel draped over the side.)"
+},
             bedframe = function()
                 return accessor.plot < 2 and ({
-                    "<p:player>(A metal bed frame. The most dangerous object in the universe.)"
-                }) or ({
-                    "<p:player>(A metal bed frame, with one side removed.)",
-                    "<p:player><f:sweat3>(If anything, this makes it MORE dangerous...)"
-                })
+"<p:player>(A metal bed frame. The most dangerous object in the universe.)"
+}) or ({
+"<p:player>(A metal bed frame, with one side removed.)",
+"<p:player><f:sweat3>(If anything, this makes it MORE dangerous...)"
+})
             end,
             fusebox = {
-                "<p:none>(The box emits a faint hum of electricity.)"
-            },
+"<p:none>(The box emits a faint hum of electricity.)"
+},
             lightswitch = {
-                "<p:none>(A light switch.)"
-            },
+"<p:none>(A light switch.)"
+},
             lamp = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(Favoring darkness's allure, you'd rather keep the lamp off.)"
-                }) or ({
+"<p:none>(Favoring darkness's allure, you'd rather keep the lamp off.)"
+}) or ({
                     "<p:player>(A lamp.)",
                     unpack(accessor.plot < 3 and ({
-                        "<p:player><f:sigh>(... not something I use very often.)"
-                    }) or ({}))
+"<p:player><f:sigh>(... not something I use very often.)"
+}) or ({}))
                 })
             end,
             telescope = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(A telescope, still in its bag. You'll get it out eventually.)"
-                }) or ({
-                    "<p:player><f:side>(A bagged-up telescope. That's a shame...)"
-                })
+"<p:none>(A telescope, still in its bag. You'll get it out eventually.)"
+}) or ({
+"<p:player><f:side>(A bagged-up telescope. That's a shame...)"
+})
             end,
             bookshelf = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(In your opinion, books are the ideal medium for fiction.)"
-                }) or (not accessor.event_home_secret and ({
-                    "<p:player><f:what>(This is a very good bookshelf. Almost makes me want to stay...)"
-                }) or (accessor.event_home_bookshelf < 1 and ({
-                    "<p:player><f:side>(There's a broken lockbox up there, alright...)"
-                }) or (accessor.event_home_bookshelf < 2 and ({
-                    "<p:player><f:sigh>(The box is too high for me to reach it.)"
-                }) or ({
-                    "<p:player>(A gateway to reading, in more ways than one.)"
-                }))))
+"<p:none>(In your opinion, books are the ideal medium for fiction.)"
+}) or (not accessor.event_home_secret and ({
+"<p:player><f:what>(This is a very good bookshelf. Almost makes me want to stay...)"
+}) or (accessor.event_home_bookshelf < 1 and ({
+"<p:player><f:side>(There's a broken lockbox up there, alright...)"
+}) or (accessor.event_home_bookshelf < 2 and ({
+"<p:player><f:sigh>(The box is too high for me to reach it.)"
+}) or ({
+"<p:player>(A gateway to reading, in more ways than one.)"
+}))))
             end,
             couch = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(The couch. You wonder if you'll fall asleep here again.)"
-                }) or (accessor.plot < 2 and ({
-                    "<p:player><f:sweat5>(Someone's been sleeping on this couch, haven't they?)"
-                }) or ({
-                    "<p:player><f:confused>(Would a couch cushion soften the landing from a big jump?)",
-                    "<p:player><f:sweat>(... no, too risky.)"
-                }))
+"<p:none>(The couch. You wonder if you'll fall asleep here again.)"
+}) or (accessor.plot < 2 and ({
+"<p:player><f:sweat5>(Someone's been sleeping on this couch, haven't they?)"
+}) or ({
+"<p:player><f:confused>(Would a couch cushion soften the landing from a big jump?)",
+"<p:player><f:sweat>(... no, too risky.)"
+}))
             end,
             entertainment = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(The family entertainment center, an essential part of any home.)"
-                }) or (accessor.plot < 2 and ({
-                    "<p:player>(A deluxe-edition family entertainment center.)"
-                }) or ({
-                    "<p:player>(Family entertainment center.)"
-                }))
+"<p:none>(The family entertainment center, an essential part of any home.)"
+}) or (accessor.plot < 2 and ({
+"<p:player>(A deluxe-edition family entertainment center.)"
+}) or ({
+"<p:player>(Family entertainment center.)"
+}))
             end,
             SIPPY = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(A set of cups from a local consignment store.)"
-                }) or (accessor.plot < 2 and ({
-                    "<p:player><f:sweat3>(Weird cups, full of... weird space fluid, or something.)",
-                    "<p:player><f:sweat>(It's hard to tell.)"
-                }) or ({
-                    "<p:player><f:sigh>(Better leave these where they are.)"
-                }))
+"<p:none>(A set of cups from a local consignment store.)"
+}) or (accessor.plot < 2 and ({
+"<p:player><f:sweat3>(Weird cups, full of... weird space fluid, or something.)",
+"<p:player><f:sweat>(It's hard to tell.)"
+}) or ({
+"<p:player><f:sigh>(Better leave these where they are.)"
+}))
             end,
             basket = function()
                 return accessor.plot < 1 and ({
-                        "<p:none>(An empty basket. You must have left your best friend upstairs.)"
-                    }) or
+"<p:none>(An empty basket. You must have left your best friend upstairs.)"
+}) or
                     (accessor.item_goatplush and ({ "<p:player><f:side>(Somehow, I'm tempted to put the plushie in this basket...)", accessor.floof and "<p:player><f:sweat4>(... of course, I'd still rather keep it on my head.)" or "<p:player><f:sweat4>(... of course, I'd still rather keep it with me.)" }) or ({
-                        "<p:player>(Feels like something's missing here.)"
-                    }))
+"<p:player>(Feels like something's missing here.)"
+}))
             end,
             flipbasket = {
-                "<p:player><f:sodesuka>(The basket has become the stool.)"
-            },
+"<p:player><f:sodesuka>(The basket has become the stool.)"
+},
             telecomm = {
-                "<p:none>(A portable comms device. One new message has been received.)",
-                "<p:none>(You'll play it back once you're not so sleepy.)"
-            },
+"<p:none>(A portable comms device. One new message has been received.)",
+"<p:none>(You'll play it back once you're not so sleepy.)"
+},
             diningchair1 = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(Your dining chair.)"
-                }) or (accessor.plot < 2 and ({
-                    "<p:player>(Just a dining chair.)"
-                }) or ({
-                    "<p:player><f:sigh>(No matter what happens, it'll always be a dining chair.)"
-                }))
+"<p:none>(Your dining chair.)"
+}) or (accessor.plot < 2 and ({
+"<p:player>(Just a dining chair.)"
+}) or ({
+"<p:player><f:sigh>(No matter what happens, it'll always be a dining chair.)"
+}))
             end,
             diningchair2 = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(A dining chair. You don't have anywhere else to put it.)"
-                }) or (accessor.plot < 2 and ({
-                    "<p:player><f:sigh>(... there's something weird about this dining chair.)"
-                }) or ({
-                    "<p:player>(This really doesn't belong here.)"
-                }))
+"<p:none>(A dining chair. You don't have anywhere else to put it.)"
+}) or (accessor.plot < 2 and ({
+"<p:player><f:sigh>(... there's something weird about this dining chair.)"
+}) or ({
+"<p:player>(This really doesn't belong here.)"
+}))
             end,
             sink = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(A leaky faucet. You'd like to fix this as soon as possible.)"
-                }) or (accessor.plot < 2 and ({
-                    "<p:player><f:sweat5>(If this was MY house, I'd fix this on the spot.)"
-                }) or ({
-                    "<p:player><f:sweat3>(The water's stopped...)"
-                }))
+"<p:none>(A leaky faucet. You'd like to fix this as soon as possible.)"
+}) or (accessor.plot < 2 and ({
+"<p:player><f:sweat5>(If this was MY house, I'd fix this on the spot.)"
+}) or ({
+"<p:player><f:sweat3>(The water's stopped...)"
+}))
             end,
             jars = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(Jars with spices used in fancier meals. They're full to the brim.)"
-                }) or (accessor.plot < 2 and ({
-                    "<p:player><f:sweat>(Never open a stranger's spice jars. Learned that the hard way.)"
-                }) or ({
-                    "<p:player>(Spice jars.)"
-                }))
+"<p:none>(Jars with spices used in fancier meals. They're full to the brim.)"
+}) or (accessor.plot < 2 and ({
+"<p:player><f:sweat>(Never open a stranger's spice jars. Learned that the hard way.)"
+}) or ({
+"<p:player>(Spice jars.)"
+}))
             end,
             plate = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(The only dinner plate you'll ever need.)"
-                }) or (accessor.plot < 2 and ({
-                    "<p:player>(A dinner plate. Looks like it's part of a set.)"
-                }) or ({
-                    "<p:player>(A dinner plate.)"
-                }))
+"<p:none>(The only dinner plate you'll ever need.)"
+}) or (accessor.plot < 2 and ({
+"<p:player>(A dinner plate. Looks like it's part of a set.)"
+}) or ({
+"<p:player>(A dinner plate.)"
+}))
             end,
             silverware = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(Kitchen utensils. You see no reason to replace them.)"
-                }) or (accessor.plot < 2 and ({
-                    "<p:player><f:sodesuka>(These utensils seem a little old-fashioned...)"
-                }) or ({
-                    "<p:player>(Kitchen utensils.)"
-                }))
+"<p:none>(Kitchen utensils. You see no reason to replace them.)"
+}) or (accessor.plot < 2 and ({
+"<p:player><f:sodesuka>(These utensils seem a little old-fashioned...)"
+}) or ({
+"<p:player>(Kitchen utensils.)"
+}))
             end,
             behindfridge = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(Plates and bowls stacked neatly in a pile. You don't use these.)"
-                }) or (accessor.plot < 2 and ({
-                    "<p:player>(A pile of freshly-washed dishes.)"
-                }) or ({
-                    "<p:player>(Clean dishes.)"
-                }))
+"<p:none>(Plates and bowls stacked neatly in a pile. You don't use these.)"
+}) or (accessor.plot < 2 and ({
+"<p:player>(A pile of freshly-washed dishes.)"
+}) or ({
+"<p:player>(Clean dishes.)"
+}))
             end,
             fridge = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(The fridge. You'd eat something if it wasn't so late.)"
-                }) or ({
-                    "<p:player><f:sweat4>(Hope my... er, kidnapper doesn't mind me eating their food.)"
-                })
+"<p:none>(The fridge. You'd eat something if it wasn't so late.)"
+}) or ({
+"<p:player><f:sweat4>(Hope my... er, kidnapper doesn't mind me eating their food.)"
+})
             end,
             stove = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(A laser-action stove and oven combination. It's very clean.)"
-                }) or (accessor.plot < 2 and ({
-                    "<p:player><f:side>(This laser stove looks brand new...)",
-                    "<p:player><f:sodesuka>(Guess I'm not the only one who doesn't know how to cook.)"
-                }) or ({
-                    "<p:player><f:sodesuka>(Laser stove.)"
-                }))
+"<p:none>(A laser-action stove and oven combination. It's very clean.)"
+}) or (accessor.plot < 2 and ({
+"<p:player><f:side>(This laser stove looks brand new...)",
+"<p:player><f:sodesuka>(Guess I'm not the only one who doesn't know how to cook.)"
+}) or ({
+"<p:player><f:sodesuka>(Laser stove.)"
+}))
             end,
             bowl_extra = function()
                 return accessor.event_home_food and ({
-                    "<p:player><f:sigh>(Just an empty bowl now.)"
-                }) or ({})
+"<p:player><f:sigh>(Just an empty bowl now.)"
+}) or ({})
             end,
             rope = {
-                "<p:none>(A length of rope. It's been useful over the years.)"
-            },
+"<p:none>(A length of rope. It's been useful over the years.)"
+},
             scissors = {
-                "<p:none>(A pair of scissors, good for cutting ropes.)"
-            },
+"<p:none>(A pair of scissors, good for cutting ropes.)"
+},
             pantry = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(A well-stocked pantry. With this, you'll be ready for doomsday.)"
-                }) or (accessor.plot < 2 and ({
-                    "<p:player>(Pantry food. My worst nightmare.)"
-                }) or ({
-                    "<p:player>(Pantry food.)"
-                }))
+"<p:none>(A well-stocked pantry. With this, you'll be ready for doomsday.)"
+}) or (accessor.plot < 2 and ({
+"<p:player>(Pantry food. My worst nightmare.)"
+}) or ({
+"<p:player>(Pantry food.)"
+}))
             end,
             board = function()
                 return accessor.plot < 1 and ({
-                    "<p:none>(You feel this is exactly where it belongs.)"
-                }) or ({
+"<p:none>(You feel this is exactly where it belongs.)"
+}) or ({
                     "<p:player>(A large piece of wood.)",
                     unpack(accessor.plot < 2 and ({
-                        "<p:player><f:side>(Looks like an extension for that dining table...)"
-                    }) or ({}))
+"<p:player><f:side>(Looks like an extension for that dining table...)"
+}) or ({}))
                 })
             end,
             secret = function()
                 local ____temp_3
                 if accessor.plot < 1 then
                     ____temp_3 = {
-                        "<p:none>(A tackboard with important notes.)"
-                    }
+"<p:none>(A tackboard with important notes.)"
+}
                 else
                     local ____array_2 = __TS__SparseArrayNew(unpack(not accessor.event_home_secret and ({
-                        "<p:player><f:side>(There's a series of notes on this tackboard...)"
-                    }) or ({})))
+"<p:player><f:side>(There's a series of notes on this tackboard...)"
+}) or ({})))
                     __TS__SparseArrayPush(
                         ____array_2,
                         "<p:player>(\"Plant boka tree tomorrow\")",
@@ -1152,12 +1152,12 @@ local function textGen(pager)
                         unpack(not accessor.event_home_secret and
                             ({ "<p:player><f:confused>(Wait. A lockbox?)", accessor.event_home_bookshelf == 0.1 and "<p:player><f:side>(I swear there was a box like that in the living room somewhere...)" or "<p:player><f:confused>(Was there a lockbox around here somewhere?)" }) or
                             (accessor.event_home_bookshelf < 1 and ({
-                                "<p:player><f:sigh>(... still haven't found the lockbox.)"
-                            }) or (accessor.event_home_bookshelf < 2 and ({
-                                "<p:player><f:sweat5>(... I've found the lockbox, but I can't reach it...)"
-                            }) or ({
-                                "<p:player><f:sodesuka>(... weird how a library card needed a locked box.)"
-                            }))))
+"<p:player><f:sigh>(... still haven't found the lockbox.)"
+}) or (accessor.event_home_bookshelf < 2 and ({
+"<p:player><f:sweat5>(... I've found the lockbox, but I can't reach it...)"
+}) or ({
+"<p:player><f:sodesuka>(... weird how a library card needed a locked box.)"
+}))))
                     )
                     ____temp_3 = { __TS__SparseArraySpread(____array_2) }
                 end
