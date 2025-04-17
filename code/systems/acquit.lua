@@ -14,7 +14,7 @@ local world = ____global.world
 local ____launcher = require("code.screens.launcher")
 local mouseButtonMenu = ____launcher.mouseButtonMenu
 local function textGen()
-    return {header = "(Are you sure?)\n{color=0xff3f3f}(Unsaved data in this\nworld will be lost.)", button1 = "STAY", button2 = "EXIT"}
+    return {header = "（确定要退出吗？）\n{color=0xff3f3f}（本世界未保存的数据\n将会丢失。）", button1 = "继续游玩", button2 = "退出游戏"}
 end
 local function acquit(assets, atlas, batch, ____debug, ____bindingPattern0)
     local screen

@@ -347,7 +347,7 @@ local function textGen(pager)
             "If you're looking for violence, fancy graphics, or even a game over screen, you won't find any of those here.",
             tutorial1 = "Press [↑] [↓] [←] [→] to move.",
             tutorial2 = "Press [Z] to check objects.",
-            tutorial3 = "Press [Z] to advance dialogue.",
+            tutorial3 = "按下[Z]推进对话。",
             tutorial4 = "Press [↑] [↓] to select.\nPress [Z] to confirm.",
             tutorial5 = "Press [C] to toggle the menu.\n{color=0x7f7f7f}Try every menu function.",
             tutorial6 = "Press [X] to exit.",
@@ -948,7 +948,7 @@ local function textGen(pager)
 "<p:none>(The box emits a faint hum of electricity.)"
 },
             lightswitch = {
-"<p:none>(A light switch.)"
+"<p:none>（灯的开关。）"
 },
             lamp = function()
                 return accessor.plot < 1 and ({
@@ -1011,7 +1011,8 @@ local function textGen(pager)
             end,
             basket = function()
                 return accessor.plot < 1 and ({
-"<p:none>(An empty basket. You must have left your best friend upstairs.)"
+"<p:none>（一个空篮子。）",
+"<p:none>（你肯定是把你最好的朋友\n落在楼上了。）"
 }) or
                     (accessor.item_goatplush and ({ "<p:player><f:side>(Somehow, I'm tempted to put the plushie in this basket...)", accessor.floof and "<p:player><f:sweat4>(... of course, I'd still rather keep it on my head.)" or "<p:player><f:sweat4>(... of course, I'd still rather keep it with me.)" }) or ({
 "<p:player>(Feels like something's missing here.)"

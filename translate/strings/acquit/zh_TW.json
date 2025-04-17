@@ -1,5 +1,5 @@
 {
-    "0-single": "",
-    "1-single": "",
-    "2-single": ""
+    "0-single": "（確定要退出嗎？）\\n{color=0xff3f3f}（本世界未保存的數據\\n將會丟失。）",
+    "1-single": "繼續遊玩",
+    "2-single": "退出遊戲"
 }
