@@ -11,14 +11,16 @@
     "9-multiple": "Take it off\nDo nothing",
     "10-multiple": "<p:player><f:sigh>(I'll take it off for now.)",
     "11-multiple": "<p:player>(A worn rope, nearly at its end.)",
-    "12-multiple": "<p:player><f:side>(If only this were longer...)\n<p:player><f:sweat4>(... then I wouldn't have to make ropes out of blankets.)\n<p:player>(... maybe there's something else I could make a rope out of.)",
-    "13-multiple": "<p:player>(A worn rope, nearly at its end.)\n<p:player><f:determined>(Nothing like the one I made myself.)",
-    "14-multiple": "<p:player>An average pair of kitchen scissors.",
+    "12-multiple": "<p:player>(A worn rope, nearly at its end.)\n<p:player><f:determined>(Nothing like the one I made myself.)",
+    "13-multiple": "<p:player>An average pair of kitchen scissors.",
     "0-single": "Pail",
     "1-single": "<p:player>(A pail. Good for collecting things.)",
     "2-single": "Library Card",
     "3-single": "Drill",
     "4-single": "Plushie",
     "5-single": "Rope",
-    "6-single": "Scissors"
+    "6-single": "<p:player><f:side>(If only this were longer...)",
+    "7-single": "<p:player><f:sweat4>(... then I wouldn't have to make ropes out of blankets.)",
+    "8-single": "<p:player>(... maybe there's something else I could make a rope out of.)",
+    "9-single": "Scissors"
 }

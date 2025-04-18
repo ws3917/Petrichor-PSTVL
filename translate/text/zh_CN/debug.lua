@@ -73,8 +73,8 @@ local function textGen()
         fps_err = "{color=0xff3f3f}<x> is not an integer between 1 and 60!",
         fps_get = "FPS is <x>",
         fps_set = "FPS set to <x>",
-        help_err = ("{color=0xff3f3f}<x> is not an integer between 1 and " .. tostring(#help)) .. "!",
-        help_header = ("Help (Page <x> of " .. tostring(#help)) .. ")",
+        help_err = ("{color=0xff3f3f}<x> is not an integer between 1 and " .. tostring(#help)) .. "！",
+        help_header = ("帮助（第 <x> 页，总页数：" .. tostring(#help)) .. "）",
         help_pages = __TS__ArrayMap(
             help,
             function(____, lines)
@@ -111,8 +111,8 @@ local function textGen()
         rm_get = "Room index is {color=0x7f7fff}<x>{color=0xffffff}",
         rm_set = "Room index set to {color=0x7f7fff}<x>{color=0xffffff}",
         rm_prq = "{color=0xff3f3f}There is no map to set the room index of!",
-        sk_err = ("{color=0xff3f3f}<x> is not an integer between 1 and " .. tostring(#sk)) .. "!",
-        sk_header = ("Save File Keys (Page <x> of " .. tostring(#sk)) .. ")",
+        sk_err = ("{color=0xff3f3f}<x> is not an integer between 1 and " .. tostring(#sk)) .. "！",
+        sk_header = ("Save File Keys (Page <x> of " .. tostring(#sk)) .. "）",
         sk_pages = __TS__ArrayMap(
             sk,
             function(____, keys)

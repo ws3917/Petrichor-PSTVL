@@ -1,5 +1,1 @@
-{
-    "0-single": "(Are you sure?)\\n{color=0xff3f3f}(Unsaved data in this\\nworld will be lost.)",
-    "1-single": "STAY",
-    "2-single": "EXIT"
-}
+{}

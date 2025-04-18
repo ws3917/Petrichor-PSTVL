@@ -59,7 +59,6 @@
     "57-multiple": "<p:player>(I have the extra gear I need to protect myself.)",
     "58-multiple": "<p:player><f:side>(Wait. I have these gloves and boots now...)\n<p:player>(I could try again with the extra gear to protect myself.)",
     "59-multiple": "<p:none>Climb over the gate?",
-    "60-multiple": "Yes\nNo",
     "61-multiple": "<p:player><f:sigh>(Third climb's the charm. placeholder :3)",
     "62-multiple": "<p:player><f:determined2>(Alright!)",
     "63-multiple": "<p:player><f:confused>(Is this... a factory?)",
@@ -85,14 +84,10 @@
     "9-single": "(Arrange the pipes to connect\\nthe two endpoints.)",
     "10-single": "(Press [X] to exit.)",
     "11-single": "`~1!2@3#4$5%6^7&8*9(0)-_=+[]\\\\|;:'\",<.>/?",
-    "12-single": "Work Glove",
-    "13-single": "Work Boot",
     "14-single": "Gate",
     "15-single": "Tree",
     "16-single": "Barrel",
     "17-single": "Barrel Lid",
     "18-single": "Signpost",
-    "19-single": "Signpost",
-    "20-single": "Signpost",
     "21-single": "Electrical Tower"
 }

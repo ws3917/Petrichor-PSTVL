@@ -34,6 +34,7 @@ def export_translation_json(input_file, output_file, blank=False):
 
     transdict = {}
     with input_file.open("r", encoding="utf-8") as f2:
+        stringset = set()
         content = re.search(
             r"local function textGen.*?\n(?:.*\n)*?end", f2.read()
         ).group(0)
@@ -55,9 +56,11 @@ def export_translation_json(input_file, output_file, blank=False):
         multiplelines_single = []
         for ct, line in enumerate(multiplelines):
             newline = re.findall(r'"((?:\\.|[^"\\])*)"', line)
-            transdict[f"{ct}-multiple"] = (
-                "" if blank else "\n".join(newline).replace('\\"', '"')
-            )
+            if "\n".join(newline).replace('\\"', '"') not in stringset:
+                transdict[f"{ct}-multiple"] = (
+                    "" if blank else "\n".join(newline).replace('\\"', '"')
+                )
+                stringset.add("\n".join(newline).replace('\\"', '"'))
             multiplelines_single.extend(newline)
 
         singlelines = re.findall(
@@ -70,7 +73,9 @@ def export_translation_json(input_file, output_file, blank=False):
                 singlelines_unique.append(line)
 
         for ct, line in enumerate(singlelines_unique):
-            transdict[f"{ct}-single"] = "" if blank else line.replace('\\"', '"')
+            if line not in stringset:
+                transdict[f"{ct}-single"] = "" if blank else line.replace('\\"', '"')
+                stringset.add(line)
 
     with output_file.open("w", encoding="utf-8") as f:
         json.dump(transdict, f, ensure_ascii=False, indent=4)
